@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         require_once('../controllers/WalletController.php');
         $_POST = json_decode(file_get_contents('php://input'), true);
         $controller = new WalletController($conexion);
-        $controller->addBalance($_POST);
+        $controller->handleWallet($_POST);
     } else {
         http_response_code(404); // Endpoint no encontrado
     }
