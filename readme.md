@@ -86,8 +86,6 @@ A continuación, se detallan los endpoints disponibles para interactuar con la A
     }
     ```
 
-    **Nota:** El `role_id` debe ser `1` para una persona común y `2` para un comerciante.
-
 ### Realizar transacción
 
 - Método: `POST`
