@@ -1,5 +1,5 @@
 <?php
-// Incluir archivos necesarios y configuraciones
+// importaciones necesarios
 require_once('../config/database.php');
 
 // Obtener la URL solicitada

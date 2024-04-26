@@ -1,7 +1,6 @@
 <?php
-// Incluir archivos necesarios y configuraciones
+// importaciones necesarios
 require_once('../config/database.php');
-// require_once('./controllers/UserController.php');
 
 // Obtener la URL solicitada
 $request_uri = $_SERVER['REQUEST_URI'];

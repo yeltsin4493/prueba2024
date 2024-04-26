@@ -1,5 +1,5 @@
 <?php
-// Incluir archivo de configuración de la base de datos
+// importaciones necesarios
 require_once('../config/database.php');
 
 // Seleccionar la base de datos

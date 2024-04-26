@@ -1,7 +1,17 @@
 <?php
-// Incluir archivos necesarios y configuraciones
+// importaciones necesarios
+require_once('../utils/JWTUtils.php');
 require_once('../config/database.php');
-// require_once('./controllers/UserController.php');
+
+// Obtener el token JWT de la cabecera Authorization
+$token = JWTUtils::getTokenFromHeaders();
+
+// Verificar si el token es válido
+if (!JWTUtils::handleVerifyToken($token)) {
+    http_response_code(401); // Unauthorized
+    echo json_encode(array("error" => "Acceso no autorizado"));
+    exit();
+}
 
 // Obtener la URL solicitada
 $request_uri = $_SERVER['REQUEST_URI'];

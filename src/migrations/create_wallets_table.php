@@ -1,10 +1,6 @@
 <?php
-// Incluir archivo de configuración de la base de datos
+// importaciones necesarios
 require_once('../config/database.php');
-
-// // Crear la base de datos si no existe
-// $query = "CREATE DATABASE IF NOT EXISTS land_gorilla";
-// $conexion->query($query);
 
 // Seleccionar la base de datos
 $conexion->select_db("land_gorilla");

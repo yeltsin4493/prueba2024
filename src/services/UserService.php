@@ -17,7 +17,7 @@ class UserService
         $document_id = $request_data['document_id'];
         $email = $request_data['email'];
         $password = $request_data['password'];
-        $role_id = $request_data['role_id']; // Añadir el campo role_id al formulario de registro
+        $role_id = $request_data['role_id'];
 
         // Verificar si el documento de identidad ya está registrado
         $existing_user_document = $this->getUserByDocumentId($document_id);
@@ -54,11 +54,11 @@ class UserService
         $user = $this->getUserByEmailAndPassword($email, $password);
 
         if ($user) {
-            // Usuario autenticado
-            echo json_encode(array('message' => 'Inicio de sesión exitoso', 'user' => $user));
+            // Usuario autenticado, retorna los datos del usuario
+            return $user;
         } else {
-            // Credenciales incorrectas
-            echo json_encode(array('error' => 'Credenciales incorrectas'));
+            // Credenciales incorrectas, retorna null
+            return null;
         }
     }
 
